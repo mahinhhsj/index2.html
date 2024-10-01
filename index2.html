@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only For You 😏</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive; /* Specific cursive font */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000080; /* Navy blue background */
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars from showing */
+        }
+
+        .container {
+            text-align: center;
+            background-color: #E6E6FA; /* Lavender background */
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid #333;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #yesBtn:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #noBtn:hover {
+            background-color: #f44336;
+            color: white;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        /* Snowflake animation */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1.5rem;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Different snowflakes at different positions and fall speeds */
+        .snowflake:nth-child(1) {
+            left: 5%;
+            animation-duration: 10s;
+            animation-delay: 0s;
+        }
+
+        .snowflake:nth-child(2) {
+            left: 10%;
+            animation-duration: 12s;
+            animation-delay: 2s;
+        }
+
+        .snowflake:nth-child(3) {
+            left: 15%;
+            animation-duration: 14s;
+            animation-delay: 1s;
+        }
+
+        .snowflake:nth-child(4) {
+            left: 20%;
+            animation-duration: 11s;
+            animation-delay: 3s;
+        }
+
+        .snowflake:nth-child(5) {
+            left: 25%;
+            animation-duration: 13s;
+            animation-delay: 0s;
+        }
+
+        .snowflake:nth-child(6) {
+            left: 30%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        .snowflake:nth-child(7) {
+            left: 35%;
+            animation-duration: 12s;
+            animation-delay: 1s;
+        }
+
+        .snowflake:nth-child(8) {
+            left: 40%;
+            animation-duration: 14s;
+            animation-delay: 3s;
+        }
+
+        .snowflake:nth-child(9) {
+            left: 45%;
+            animation-duration: 11s;
+            animation-delay: 0s;
+        }
+
+        .snowflake:nth-child(10) {
+            left: 50%;
+            animation-duration: 13s;
+            animation-delay: 2s;
+        }
+
+        .snowflake:nth-child(11) {
+            left: 55%;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+
+        .snowflake:nth-child(12) {
+            left: 60%;
+            animation-duration: 12s;
+            animation-delay: 3s;
+        }
+
+        .snowflake:nth-child(13) {
+            left: 65%;
+            animation-duration: 14s;
+            animation-delay: 0s;
+        }
+
+        .snowflake:nth-child(14) {
+            left: 70%;
+            animation-duration: 11s;
+            animation-delay: 2s;
+        }
+
+        .snowflake:nth-child(15) {
+            left: 75%;
+            animation-duration: 13s;
+            animation-delay: 1s;
+        }
+
+        /* Animated Trees */
+        .tree {
+            position: absolute;
+            bottom: 0;
+            font-size: 2rem;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .tree:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .tree:nth-child(2) {
+            left: 20%;
+            animation-delay: 0.5s;
+        }
+
+        .tree:nth-child(3) {
+            left: 35%;
+            animation-delay: 1s;
+        }
+
+        .tree:nth-child(4) {
+            left: 50%;
+            animation-delay: 1.5s;
+        }
+
+        .tree:nth-child(5) {
+            left: 65%;
+            animation-delay: 2s;
+        }
+
+        .tree:nth-child(6) {
+            left: 80%;
+            animation-delay: 2.5s;
+        }
+
+        /* Animated Santa */
+        .santa {
+            position: absolute;
+            bottom: 0;
+            font-size: 2rem;
+            animation: moveSanta 5s linear infinite;
+        }
+
+        @keyframes moveSanta {
+            0% {
+                left: -10%;
+            }
+            50% {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            100% {
+                left: 110%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Would you like to go on a date with me?</h1>
+        <button id="yesBtn" class="button">YES</button>
+        <button id="noBtn" class="button">NO</button>
+    </div>
+
+    <!-- Snowflakes -->
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❅</div>
+
+    <!-- Christmas Trees -->
+    <div class="tree">🎄</div>
+    <div class="tree">🎄</div>
+    <div class="tree">🎄</div>
+    <div class="tree">🎄</div>
+    <div class="tree">🎄</div>
+    <div class="tree">🎄</div>
+
+    <!-- Santa Claus -->
+    <div class="santa">🎅</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const noBtn = document.getElementById("noBtn");
+            const yesBtn = document.getElementById("yesBtn");
+
+            function moveButton() {
+                const container = document.querySelector(".container");
+                const containerRect = container.getBoundingClientRect();
+                const btnWidth = noBtn.offsetWidth;
+                const btnHeight = noBtn.offsetHeight;
+
+                const randomX = Math.floor(Math.random() * (containerRect.width - btnWidth));
+                const randomY = Math.floor(Math.random() * (containerRect.height - btnHeight));
+
+                noBtn.style.position = "absolute";
+                noBtn.style.left = `${randomX}px`;
+                noBtn.style.top = `${randomY}px`;
+            }
+
+            noBtn.addEventListener("mouseenter", moveButton);
+
+            yesBtn.addEventListener("click", function () {
+                alert("I knew you would say yes 😏🫶🏻, meet me tomorrow at 1 PM, IN FRONT IF OUR College!👀");
+            });
+        });
+    </script>
+</body>
+</html>
